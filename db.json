@@ -19,10 +19,8 @@
       "likes": 3
     },
     {
-      "id": 4,
-      "name": "Slinky Dog",
-      "image": "https://www.freeiconspng.com/uploads/slinky-png-transparent-1.png",
-      "likes": 4
+      "likes": 4,
+      "id": 4
     },
     {
       "id": 5,
@@ -47,6 +45,18 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Rock1",
+      "image": "https://images.homedepot-static.com/productImages/75e56a23-eadc-470e-b163-59196843760c/svn/backyard-x-scapes-fake-rocks-knt-rb1-64_1000.jpg",
+      "likes": "0",
+      "id": 18
+    },
+    {
+      "name": "Rock2",
+      "image": "https://images.homedepot-static.com/productImages/75e56a23-eadc-470e-b163-59196843760c/svn/backyard-x-scapes-fake-rocks-knt-rb1-64_1000.jpg",
+      "likes": "0",
+      "id": 19
     }
   ]
 }
