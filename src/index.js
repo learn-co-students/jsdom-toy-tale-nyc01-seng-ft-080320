@@ -16,8 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const renderToys= (toys) => {
     for (const toy of toys) {
-      const toyDiv = document.createElement('div')
-      toyDiv.className = "card"
+        renderToy(toy)
+    }
+  }
+
+  const renderToy = (toy) => {
+    const toyDiv = document.createElement('div')
+    toyDiv.className = "card"
       toyDiv.innerHTML = `
       <h2>${toy.name}</h2>
       <img src=${toy.image} class="toy-avatar"/>
@@ -27,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `
       const divContainer = document.querySelector("#toy-collection")
       divContainer.append(toyDiv)  
-    }
   }
 
   const submitHandler = () => {
@@ -48,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
               },
               body: JSON.stringify(toy)
           })
+          .then(response => response.json())
+          .then(data => renderToy(data))
+
           form.reset()
       })
   }
@@ -62,8 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const toyName = toyParentNode.querySelector('h2')
             const toyImage = toyParentNode.querySelector('img')
             const toyLikes = toyParentNode.querySelector('p')
-            toyLikes.textContent = parseInt(toyLikes.textContent) + 1
             const toyId = parseInt(toyParentNode.querySelector('p[hidden]').textContent)
+            
             fetch(`${URL}${toyId}`, {
             method: "PATCH",
             headers: {
@@ -73,13 +80,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({
                     "name": toyName.textContent,
                     "image": toyImage['src'],
-                    "likes": toyLikes.textContent
+                    "likes": parseInt(toyLikes.textContent) + 1
                 })
             })
+            .then(response => response.json())
+            .then(data => toyLikes.textContent = data.likes)
         } 
     })
    }
-//    clickHandler()
+
 
 
   const addBtn = document.querySelector("#new-toy-btn");

@@ -40,31 +40,25 @@
       "id": 7,
       "name": "Hamm",
       "image": "https://cdn140.picsart.com/244090226021212.png?r1024x1024",
-      "likes": 0
+      "likes": 4
     },
     {
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -2
+      "likes": 9
     },
     {
       "name": "Roy",
       "image": "https://secure.img1-fg.wfcdn.com/im/68817757/resize-h500-w500%5Ecompr-r85/8470/84707680/Pokemon+Pikachu+Wall+Decal.jpg",
-      "likes": 0,
+      "likes": 9,
       "id": 12
     },
     {
       "name": "Joe",
       "image": "https://img.pokemondb.net/artwork/snorlax.jpg",
-      "likes": 0,
+      "likes": "2",
       "id": 17
-    },
-    {
-      "name": "Joe",
-      "image": "https://img.pokemondb.net/artwork/snorlax.jpg",
-      "likes": 0,
-      "id": 18
     },
     {
       "name": "Jallen ",
@@ -73,10 +67,10 @@
       "id": 19
     },
     {
-      "name": "Roy",
-      "image": "https://secure.img1-fg.wfcdn.com/im/68817757/resize-h500-w500%5Ecompr-r85/8470/84707680/Pokemon+Pikachu+Wall+Decal.jpg",
+      "name": "Forky",
+      "image": "https://m.media-amazon.com/images/I/71CUc-hFanL.jpg",
       "likes": 0,
-      "id": 20
+      "id": 21
     }
   ]
 }
