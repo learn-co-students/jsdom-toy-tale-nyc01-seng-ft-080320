@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 21
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 16
     },
     {
       "id": 3,
@@ -47,6 +47,18 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Anson",
+      "image": "https://www.maids.com/blog/wp-content/uploads/2012/08/how-to-clean-a-bath-toy-with-mold-1280x720.jpg",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "Danzo",
+      "image": "https://www.maids.com/blog/wp-content/uploads/2012/08/how-to-clean-a-bath-toy-with-mold-1280x720.jpg",
+      "likes": 0,
+      "id": 10
     }
   ]
 }
