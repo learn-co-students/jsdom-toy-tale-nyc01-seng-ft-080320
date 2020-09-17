@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 17
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "id": 5,
       "name": "Rex",
       "image": "http://umich.edu/~chemh215/W11HTML/SSG5/ssg5.2/FRex.png",
-      "likes": 1
+      "likes": 4
     },
     {
       "id": 6,
@@ -46,7 +46,19 @@
       "id": 8,
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
-      "likes": -2
+      "likes": 15
+    },
+    {
+      "name": "Starscream",
+      "image": "  https://images-na.ssl-images-amazon.com/images/I/81BDQZEXrpL._AC_SL1500_.jpg",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "Teddy",
+      "image": "https://media4.s-nbcnews.com/j/newscms/2014_13/281626/140326-ruxpin-jms-1530_9f25e56f68cd1875bcb44bf37d78bea1.fit-760w.jpg",
+      "likes": 17,
+      "id": 10
     }
   ]
 }
