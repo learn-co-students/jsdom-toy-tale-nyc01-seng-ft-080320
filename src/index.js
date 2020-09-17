@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(resp => resp.json())
     .then(toyCollection => {
       renderToys(toyCollection) 
-      
+      submitHandler()
+      clickHandler()
     })
   }
   fetchToys();
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <img src=${toy.image} class="toy-avatar"/>
       <p>${toy.likes} </p>
       <button class="like-btn">Like <3</button>
+      <p hidden>${toy.id}</p>
       `
       const divContainer = document.querySelector("#toy-collection")
       divContainer.append(toyDiv)  
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
               likes: 0
           }
 
-          fetch(`http://localhost:3000/toys/`, {
+          fetch(URL, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -49,13 +51,35 @@ document.addEventListener("DOMContentLoaded", () => {
           form.reset()
       })
   }
- submitHandler()
-
  
 
+   const clickHandler = (toyCollection) => {
+    const divContainer = document.querySelector("#toy-collection")
+    divContainer.addEventListener('click', (e) => {
+        if (e.target.matches(".like-btn")) {
 
-// if (e.target.matches) 
-// then....
+            const toyParentNode = e.target.parentElement
+            const toyName = toyParentNode.querySelector('h2')
+            const toyImage = toyParentNode.querySelector('img')
+            const toyLikes = toyParentNode.querySelector('p')
+            toyLikes.textContent = parseInt(toyLikes.textContent) + 1
+            const toyId = parseInt(toyParentNode.querySelector('p[hidden]').textContent)
+            fetch(`${URL}${toyId}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json" 
+                },
+                body: JSON.stringify({
+                    "name": toyName.textContent,
+                    "image": toyImage['src'],
+                    "likes": toyLikes.textContent
+                })
+            })
+        } 
+    })
+   }
+//    clickHandler()
 
 
   const addBtn = document.querySelector("#new-toy-btn");
