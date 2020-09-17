@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const image = form.image.value
 
       const toy = {
-          
+
+        
         name: name,
         image: image,
         likes: 0,
