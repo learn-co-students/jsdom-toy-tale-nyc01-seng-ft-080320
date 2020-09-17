@@ -80,29 +80,29 @@ document.addEventListener("DOMContentLoaded", () => {
       toyDiv.addEventListener('click', event => {
           if (event.target.matches(".like-btn")) {
               const likeButton = event.target
-              // console.log(likeButton.innerHTML)
               const cardDiv = likeButton.parentElement
               const tagName = cardDiv.querySelector("p")
-              const newLikes = tagName.innerText ++
+              const newLikes = parseInt(tagName.innerText) + 1
               const header = cardDiv.querySelector('h2')
               const id = header.dataset.id
                   
               fetch(`http://localhost:3000/toys/${id}`, {
-                method: PATCH,
+                method: "PATCH",
                 headers: {
                   "Content-Type": "application/json",
                   "Accept": "application/json"
                 },
                   body: JSON.stringify({
                     likes: newLikes,
-                    id: '${id}'
                   })
               })
               .then(function(response) {
                 return response.json();
               })
               .then(function(object) {
-                console.log('object:', object)
+                //const newLikes = tagName.innerText ++
+                //console.log(newLikes)
+                tagName.textContent = object.likes
               })
             
             
