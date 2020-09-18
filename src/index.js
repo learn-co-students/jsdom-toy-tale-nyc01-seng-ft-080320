@@ -124,7 +124,7 @@ const clickHandler = () => {
 
 
 /*
-Fetch Andy's Toys
+Fetch Andy's Toy
 
 On the index.html page, there is a div with the id "toy-collection."
 
